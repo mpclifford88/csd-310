@@ -1,5 +1,5 @@
 '''
-    Title: Clifford_assignment_12.py
+    Title: what_a_book_.py
     Author: Matthew Clifford
     Date: 02/26/2023
 '''
@@ -16,7 +16,7 @@ config = {
     "user": "whatabook_user",
     "password": "fR%oA!dB5*nLwW",
     "host": "194.156.136.38",
-    "database": "whatabook",
+    "db": "whatabook",
     "raise_on_warnings": True
 }
 
@@ -124,7 +124,7 @@ def add_book_to_wishlist(_cursor, _user_id, _book_id):
 
 try:
 
-    db = mysql.connector.connect(**config) # connect to the WhatABook database
+    db = mysql.connector.connect(config) # connect to the WhatABook database
 
     cursor = db.cursor() # cursor for MySQL queries
 
@@ -184,4 +184,3 @@ except mysql.connector.Error as err:
 finally:
 
     db.close()
-    
